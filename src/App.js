@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import React from 'react'
+
+const numbers = [...Array(100).keys()];
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App numbers">
+      {numbers.map( (element, index) => {
+        if((element+1)%3 === 0 && (element+1)%5 === 0) return <h1 className='green' key={index}>Fizz Buzz</h1>
+        if((element+1)%3 === 0 && (element+1)%5 !== 0) return <h1 className='red' key={index}>Fizz</h1>
+        if((element+1)%3 !== 0 && (element+1)%5 === 0) return <h1 className='yellow' key={index}>Buzz</h1>
+        return <h1 key={index}>{element+1}</h1>
+      })}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

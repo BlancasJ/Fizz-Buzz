@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #282c34;
+}
+
+.red {
+  background-color: red;
+  color: black;
+}
+
+.yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.green {
+  background-color: rgb(46, 201, 46);
+  color: black;
+}
+
+.numbers {
+  color: whitesmoke;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
